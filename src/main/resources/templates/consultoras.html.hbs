@@ -1,0 +1,28 @@
+{{#partial "titulo" }}
+	<title>Consultorea-me consultoras {{nombre}}</title>
+{{/partial}}
+
+
+{{#partial "contenido" }}	
+	<section>
+		<h2>Nuestras Consultoras</h2>
+
+		<p>Listado de nuestras consultoras mas relevantes.</p>
+
+		<form action="/consultoras" method="GET"> 
+			Buscar por nombre
+			<input  name="filtro" type="text"  placeholder="ingrese el nombre">
+			<input  type="submit" value="Buscar"> 
+		</form>
+		<ul>
+			{{#consultoras}}
+			<li>{{nombre}}</li> 
+			<li>{{cantidadEmpleados}}</li>
+			<a href="/consultoras/{{id}}">acá</a>
+			{{/consultoras}}
+		</ul>
+
+	</section>
+
+{{/partial}}
+{{> layout.html.hbs}}

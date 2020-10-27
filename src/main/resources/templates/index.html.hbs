@@ -1,0 +1,41 @@
+{{#partial "titulo" }}
+	<title>Consultorea-me home</title>
+{{/partial}}
+
+{{#partial "contenido" }}
+		<section>
+			<h2>Sobre nuestro sitio</h2>
+			<p>
+				Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc porta neque sed nisi rutrum, eu ultricies lacus
+				rutrum. In sagittis, nunc a pellentesque egestas, lacus odio tincidunt nunc, nec facilisis ipsum lorem sit amet
+				mauris. Maecenas vel mi turpis. Morbi ac lacus auctor ante dignissim aliquam vitae vel turpis. Suspendisse
+				tincidunt mi id commodo consectetur. Suspendisse ut gravida justo. Praesent a lectus ut nisl iaculis bibendum.
+				Nam nec sem sit amet sapien pharetra sodales. Proin congue, tortor ut condimentum fringilla, risus mauris
+				ultrices enim, vitae semper diam leo ac nisi.
+			</p>
+
+			<ol>
+				<li>Somos una empresa joven</li>
+				<li>Altos valores</li>
+				<li>Decimos lo que la gente quiere escuchar</li>
+			</ol>
+
+			Para saber más sobre las consultoras presionar <a href="/consultoras">acá</a>
+		</section>
+
+		<section>
+			<h2>Sobre nuestros clientes</h2>
+
+			<p>un bonito texto sobre nuestros clientes.</p>
+
+			<ul>
+				{{#consultoras}}
+				<li>{{nombre}}</li>
+				{{/consultoras}}
+			</ul>
+			Ver Mas <a href="/consultoras"> </a>
+		
+		</section>
+
+{{/partial}}
+{{> layout.html.hbs}}

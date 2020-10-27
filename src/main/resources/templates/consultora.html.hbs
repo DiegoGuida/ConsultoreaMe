@@ -1,0 +1,23 @@
+{{#partial "titulo" }}
+	<title>Consultorea-me Consultoras</title>
+{{/partial}}
+
+{{#partial "contenido" }}	
+
+		<section>
+			<h2>Consultora: {{nombre}}</h2>
+
+			<p>Cantidad de Empleados: {{cantidadEmpleados}}
+			<br>
+			<br>
+				Proyectos:	<ul>
+							{{#each proyectos}}
+							<li>{{nombre}}</li>
+							{{/each }}
+							</ul>
+			</p>
+
+		</section>
+
+{{/partial}}
+{{> layout.html.hbs}}
