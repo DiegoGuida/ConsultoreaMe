@@ -17,7 +17,7 @@ public class ConsultorasController {
 		Map<String, Object> modelo = new HashMap<>();
 		String nombreBuscado = request.queryParams("filtro");
 		
-		if (nombreBuscado!= null) {
+		if (nombreBuscado!= null ) {
 			modelo.put("consultoras", RepositorioConsultoras.instancia.buscarPorNombre(nombreBuscado));
 		}else {
 			modelo.put("consultoras", RepositorioConsultoras.instancia.listarOrdenadas());
